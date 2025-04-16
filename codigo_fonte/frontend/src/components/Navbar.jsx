@@ -23,9 +23,9 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/">
               <img
-                src="./images/logo_branca.png"
+                src="./images/nova_logo.png"
                 alt="NAVIR Logo"
-                className="h-12"
+                className="h-8"
               />
             </Link>
           </div>
