@@ -2,20 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { membersData } from "../data/membersData.jsx";
 
 const Members = () => {
-  const members = [
-    {
-      name: "Rafael Baitola",
-      role: "Graduando",
-      area: "Inteligência Artificial",
-    },
-    {
-      name: "Méric",
-      role: "Graduando",
-      area: "Frontend",
-    }
-  ];
+  const placeholderPhoto = "/images/placeholder.png";
 
   return (
     <motion.div
@@ -43,21 +33,22 @@ const Members = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {members.map((member, index) => (
+          {membersData.map((member, index) => (
             <motion.div
               key={index}
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 + (index * 0.1) }}
+              transition={{ delay: 0.4 + index * 0.1 }}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="h-64 overflow-hidden">
-                <img 
+              <div className="h-64 bg-gray-200">
+                <img
                   className="w-full h-full object-cover"
                   alt={`${member.name} - ${member.role}`}
-                 src="" />
+                  src={member.image || placeholderPhoto}
+                />
               </div>
-              
+
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{member.name}</h2>
                 <p className="text-[#001F3C] font-medium mb-2">{member.role}</p>

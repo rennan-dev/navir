@@ -42,7 +42,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Redes Sociais</h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/navir-ufam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors p-2 bg-white/10 rounded-full"
@@ -50,7 +50,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/navir_ufam/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors p-2 bg-white/10 rounded-full"
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="www.linkedin.com/company/navir-ufam/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors p-2 bg-white/10 rounded-full"

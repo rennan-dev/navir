@@ -4,6 +4,29 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Home = () => {
+  const features = [
+    {
+      title: "Automação",
+      description: "Desenvolvimento de sistemas autônomos e eficientes",
+      image: "/images/AT.png",
+    },
+    {
+      title: "Visão Computacional",
+      description: "Processamento e análise avançada de imagens",
+      image: "/images/VC.png",
+    },
+    {
+      title: "Inteligência Artificial",
+      description: "Soluções inteligentes para problemas complexos",
+      image: "/images/IA.png",
+    },
+    {
+      title: "Robótica",
+      description: "Inovação em sistemas robóticos",
+      image: "/images/RB.png",
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,10 +36,11 @@ const Home = () => {
     >
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             className="w-full h-full object-cover"
             alt="NAVIR background"
-           src="./images/background.png" />
+            src="/images/background.png"
+          />
         </div>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="relative z-20 text-center text-white px-4">
@@ -26,10 +50,11 @@ const Home = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold mb-4"
           >
-            <img 
-            className="w-40 mx-auto"
-            alt="NAVIR"
-           src="./images/nova_logo.png" />
+            <img
+              className="w-40 mx-auto"
+              alt="NAVIR"
+              src="/images/nova_logo.png"
+            />
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -37,7 +62,8 @@ const Home = () => {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl mb-8"
           >
-            Núcleo de Automação, Visão Computacional, Inteligência Artificial e Robótica
+            Núcleo de Automação, Visão Computacional, Inteligência Artificial e
+            Robótica
           </motion.p>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -55,30 +81,11 @@ const Home = () => {
 
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Nossas Áreas de Atuação</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Nossas Áreas de Atuação
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Automação",
-                description: "Desenvolvimento de sistemas autônomos e eficientes",
-                image: "automation"
-              },
-              {
-                title: "Visão Computacional",
-                description: "Processamento e análise avançada de imagens",
-                image: "computer-vision"
-              },
-              {
-                title: "Inteligência Artificial",
-                description: "Soluções inteligentes para problemas complexos",
-                image: "ai"
-              },
-              {
-                title: "Robótica",
-                description: "Inovação em sistemas robóticos",
-                image: "robotics"
-              }
-            ].map((feature, index) => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ y: 20, opacity: 0 }}
@@ -87,10 +94,11 @@ const Home = () => {
                 className="bg-white rounded-lg shadow-lg p-6"
               >
                 <div className="mb-4 h-48 overflow-hidden rounded-lg">
-                  <img 
+                  <img
                     className="w-full h-full object-cover"
-                    alt={`${feature.title}`}
-                   src="" />
+                    alt={feature.title}
+                    src={feature.image}
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>

@@ -42,7 +42,7 @@ const About = () => {
             <img 
               className="w-full h-[400px] object-cover"
               alt="NAVIR"
-             src="" />
+             src="./images/Navir.jpeg" />
           </motion.div>
         </div>
 
